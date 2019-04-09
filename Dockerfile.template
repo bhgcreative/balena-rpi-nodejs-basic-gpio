@@ -1,6 +1,6 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-golang:latest-build AS build
 
-WORKDIR /go/src/github.com/balena-io-projects/app-gpio
+WORKDIR /usr/src/app
 
 # use apt-get if you need to install dependencies,
 # for instance if you need ALSA sound utils, just uncomment the lines below.
@@ -8,15 +8,14 @@ WORKDIR /go/src/github.com/balena-io-projects/app-gpio
 #    alsa-utils libasound2-dev && \
 #    apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# making sure to clean up the artifacts it creates in order to reduce the image size.
+RUN JOBS=MAX npm install --production
+
 # Copies the package.json first for better cache on later pushes
 COPY package.json package.json
 
 # This will copy all files in our root to the working  directory in the container
 COPY . ./
-RUN go build
 
-# Enable systemd init system in container
-ENV INITSYSTEM on
-
-# app.js will run when container starts up on the device
-CMD ./
+# server.js will run when container starts up on the device
+CMD ["npm", "start"]
