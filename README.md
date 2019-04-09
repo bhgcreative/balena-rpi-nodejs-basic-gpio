@@ -9,6 +9,6 @@ All you need to do is :
 * connect up the pi as shown in the diagram :
 * add the resin remote repo with `git remote add resin git@git.resin.io:myGithubName/myResinAppName.git` , with the correct github and app name, or just copy if from the top right hand corner of your device dashboard on resin.io.
 * now just `git push resin master` wait a minute or so for the code to upload and start.
-* enjoy the all the LED goodness...
+* enjoy the all the LED goodness...thanks
 
 ![Circuit diagram](/docs/images/basic-gpio-diagram_bb.png)
