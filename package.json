@@ -7,7 +7,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "preinstall": "bash /usr/src/app/deps.sh",
+    "preinstall": "ls",
     "start": "node /usr/src/app/app.js"
   }
 }
