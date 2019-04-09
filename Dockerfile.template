@@ -15,8 +15,6 @@ COPY package.json package.json
 COPY . ./
 RUN go build
 
-COPY --from=build /go/src/github.com/balena-io-projects/app-gpio/ .
-
 # Enable systemd init system in container
 ENV INITSYSTEM on
 
