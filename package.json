@@ -9,7 +9,6 @@
   "scripts": {
     "preinstall": "cd ../",
     "preinstall": "ls",
-    "preinstall": "bash deps.sh",
     "start": "node app.js"
   }
 }
