@@ -1,9 +1,9 @@
 var  ledToggle, pressCount;
-//provision the gpio pins 22 for the led output and 17 for the button input
-var led= require("pi-pins").connect(22),
-    button = require("pi-pins").connect(17);
+//provision the gpio pins 13 for the led output and 18 for the button input
+var led= require("pi-pins").connect(13),
+    button = require("pi-pins").connect(18);
 
-//set the pin mode,  setting pin 22 as an output and 17 as an input
+//set the pin mode,  setting pin 13 as an output and 18 as an input
 button.mode('in');
 led.mode('out');
 
