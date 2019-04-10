@@ -8,6 +8,6 @@
   "devDependencies": {},
   "scripts": {
     "preinstall": "ls",
-    "start": "node /usr/src/app/app.js"
+    "start": "node app.js"
   }
 }
